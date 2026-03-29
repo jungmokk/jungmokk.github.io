@@ -1,10 +1,15 @@
 :root {
-    --primary: #f97316;
-    --background: #121212;
-    --surface: #1c1c1e;
+    --primary: #6366f1;
+    --primary-light: #818cf8;
+    --secondary: #f97316;
+    --background: #0f172a;
+    --surface: #1e293b;
+    --surface-hover: #334155;
     --text: #f8fafc;
     --text-dim: #94a3b8;
-    --border: #2c2c2e;
+    --border: #334155;
+    --glass: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
 }
 
 * {
@@ -16,106 +21,166 @@
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background-color: var(--background);
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(249, 115, 22, 0.1) 0px, transparent 50%);
     color: var(--text);
     line-height: 1.6;
+    min-height: 100vh;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 2rem;
 }
 
 header {
     text-align: center;
-    padding: 4rem 0;
-    border-bottom: 1px solid var(--border);
+    padding: 6rem 0 4rem;
 }
 
 h1 {
-    color: var(--primary);
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 1rem;
+    background: linear-gradient(to right, #6366f1, #a855f7, #f97316);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.05em;
 }
 
 .tagline {
     font-size: 1.25rem;
     color: var(--text-dim);
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+/* App Grid */
+#apps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.app-card {
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 2.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.app-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.app-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.app-card h3 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+}
+
+.app-card p {
+    color: var(--text-dim);
     margin-bottom: 2rem;
+    flex-grow: 1;
 }
 
 .cta-button {
     display: inline-block;
-    background-color: var(--primary);
+    background: var(--primary);
     color: white;
-    padding: 1rem 2rem;
-    border-radius: 9999px;
+    padding: 0.875rem 1.5rem;
+    border-radius: 14px;
     text-decoration: none;
     font-weight: 700;
-    transition: transform 0.2s, background-color 0.2s;
+    text-align: center;
+    transition: all 0.2s;
+    font-size: 0.95rem;
 }
 
 .cta-button:hover {
-    transform: translateY(-2px);
-    background-color: #ea580c;
+    background: var(--primary-light);
+    transform: scale(1.02);
 }
 
-section {
-    padding: 4rem 0;
+.cta-button.secondary {
+    background: transparent;
+    border: 1px solid var(--border);
+    margin-top: 1rem;
 }
 
-h2 {
-    color: var(--primary);
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
+.cta-button.secondary:hover {
+    background: var(--glass-border);
+    border-color: var(--text-dim);
 }
 
-p {
-    margin-bottom: 1.5rem;
+/* Privacy/Data Deletion Container */
+.content-page {
+    max-width: 800px;
+    margin: 4rem auto;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    padding: 3rem;
+    border-radius: 24px;
+}
+
+.content-page h2 {
+    color: var(--primary-light);
+    margin: 2rem 0 1rem;
+}
+
+.content-page p, .content-page li {
+    color: var(--text-dim);
+    margin-bottom: 1rem;
 }
 
 footer {
     text-align: center;
-    padding: 4rem 0;
+    padding: 6rem 0 4rem;
     color: var(--text-dim);
     border-top: 1px solid var(--border);
+    margin-top: 4rem;
 }
 
 .links {
     margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }
 
 .links a {
     color: var(--text-dim);
     text-decoration: none;
-    margin: 0 1rem;
+    font-size: 0.9rem;
     transition: color 0.2s;
 }
 
 .links a:hover {
-    color: var(--primary);
+    color: var(--primary-light);
 }
 
-/* Privacy Page Specific */
-.privacy-body {
-    background: var(--surface);
-    padding: 2rem;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-}
-
-.privacy-body h3 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    color: var(--primary);
-}
-
-.privacy-body ul {
-    margin-left: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.privacy-body li {
-    margin-bottom: 0.5rem;
+@media (max-width: 640px) {
+    h1 { font-size: 2.5rem; }
+    .container { padding: 1rem; }
+    .app-card { padding: 1.5rem; }
 }
