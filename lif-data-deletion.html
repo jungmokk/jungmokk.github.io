@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계정 및 데이터 삭제 안내 - 거장의 주식 (LIF)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@300;600;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #c5a880; /* Elegant Warm Gold */
+            --danger: #EF4444; /* Alert color */
+            --background: #090909;
+            --card: #141414;
+            --text: #ffffff;
+            --text-secondary: #9b9b9b;
+            --border: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.7;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background-color: var(--card);
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            text-align: center;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: block;
+            text-decoration: none;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        p {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+
+        .data-list {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            border: 1px solid var(--border);
+        }
+
+        .data-list ul {
+            margin: 0;
+            padding-left: 20px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .warning-box {
+            background-color: rgba(239, 68, 68, 0.05);
+            border: 1px solid rgba(239, 68, 68, 0.15);
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            color: var(--danger);
+            font-size: 14px;
+            text-align: left;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .method-box {
+            text-align: left;
+            margin-bottom: 24px;
+        }
+
+        .method-title {
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: block;
+            color: var(--text);
+            font-size: 0.95rem;
+            border-left: 3px solid var(--primary);
+            padding-left: 10px;
+        }
+
+        .btn {
+            display: block;
+            background-color: var(--primary);
+            color: #000000;
+            padding: 14px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: opacity 0.2s;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: var(--text-secondary);
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="logo">Legendary Investors Fund (LIF)</a>
+        <h1>계정 및 데이터 삭제 안내</h1>
+        <p>사용자의 데이터 통제권과 개인정보 보호를 위해 앱 내외에서 언제든 즉각적인 데이터 파기를 청구하실 수 있습니다.</p>
+        
+        <div class="method-box">
+            <span class="method-title">1. 앱 내에서 즉시 자동 삭제 (권장)</span>
+            <p style="font-size: 14px; margin-top: 8px; padding-left: 13px;">앱의 [설정] ➡️ [회원 탈퇴 (계정 삭제)] 메뉴를 터치하시면 본인 확인을 거쳐 대기 시간 없이 즉시 데이터가 복구 불가능하게 영구 소멸됩니다.</p>
+        </div>
+
+        <div class="method-box">
+            <span class="method-title">2. 온라인 원격 삭제 요청</span>
+            <p style="font-size: 14px; margin-top: 8px; padding-left: 13px;">앱을 이미 삭제하셨거나 접근이 불가하신 경우, 아래의 버튼 또는 메일을 통하여 계정 및 개인정보 영구 파기를 요청해주시면 24시간 내에 수동으로 즉각 파기해 드립니다.</p>
+            <a href="mailto:jungmokk@gmail.com?subject=거장의 주식 (LIF) 계정 및 데이터 삭제 요청" class="btn">삭제 요청 메일 발송하기</a>
+        </div>
+
+        <div class="data-list">
+            <span class="method-title" style="font-size: 14px; border-left: none; padding-left: 0; margin-bottom: 10px;">삭제 및 영구 파기되는 데이터 항목:</span>
+            <ul>
+                <li>사용자 고유 계정 정보 (이메일 주소 및 로그인 식별키)</li>
+                <li>AI 분석 리포트 생성 내역 (거장들의 가상 토론 및 최종 판결서 전체 이력)</li>
+                <li>보유 중인 잔여 일일 무료 및 유료 크레딧 전체 수량</li>
+            </ul>
+        </div>
+
+        <div class="warning-box">
+            <strong>⚠️ 주의사항:</strong> 계정 삭제 완료 즉시 모든 주식 분석 히스토리와 잔여 크레딧 정보는 복구 불가능한 형태로 즉시 삭제되며, 스토어 인앱 크레딧 환불 규정 외에 임의 복구는 절대 불가능합니다.
+        </div>
+
+        <div class="footer">
+            &copy; 2026 Legendary Investors Fund. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
